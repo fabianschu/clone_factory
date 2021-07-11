@@ -1,0 +1,21 @@
+{
+  "name": "clone_factory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/fabianschu/clone_factory.git",
+  "author": "fabianschu <48454910+fabianschu@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@types/node": "^16.3.1",
+    "@types/yargs": "^17.0.2",
+    "dotenv": "^10.0.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.1",
+    "hardhat": "^2.4.3",
+    "hardhat-deploy": "^0.8.11",
+    "node-ts": "^5.1.1",
+    "typescript": "^4.3.5",
+    "yargs": "^17.0.1"
+  }
+}
