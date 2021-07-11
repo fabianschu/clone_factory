@@ -9,8 +9,8 @@ export const setupTest = deployments.createFixture(
   async ({ deployments, ethers }, options: any) => {
     await deployments.fixture();
     const { f1 } = await ethers.getNamedSigners();
-    const cloneInstance = await ethers.getContract("Clone", f1);
-    const mainInstance = await ethers.getContract("Main", f1);
+    const cloneInstance = await ethers.getContract("TClone", f1);
+    const mainInstance = await ethers.getContract("TMain", f1);
     return { mainInstance, cloneInstance };
   }
 );

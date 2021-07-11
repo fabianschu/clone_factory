@@ -8,15 +8,15 @@ contract Factory {
     event CloneCreated();
     event MainDeployed(address main);
 
-    Main public main; 
+    Main public main;
+
+    constructor() {
+        main = new Main();
+        emit MainDeployed(address(main));
+    }
 
     function createClone() public {
         new Clone(address(main));
         emit CloneCreated();
-    }
-
-    function deployMain() public {
-        main = new Main();
-        emit MainDeployed(address(main));
     }
 }
