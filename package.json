@@ -5,16 +5,29 @@
   "repository": "https://github.com/fabianschu/clone_factory.git",
   "author": "fabianschu <48454910+fabianschu@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "hardhat test",
+    "build": "hardhat compile",
+    "deploy": "hardhat deploy --network"
+  },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@typechain/ethers-v5": "^7.0.1",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^8.2.3",
     "@types/node": "^16.3.1",
     "@types/yargs": "^17.0.2",
+    "chai": "^4.3.4",
     "dotenv": "^10.0.0",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.4.1",
     "hardhat": "^2.4.3",
     "hardhat-deploy": "^0.8.11",
+    "hardhat-typechain": "^0.3.5",
     "node-ts": "^5.1.1",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^10.1.0",
+    "typechain": "^5.1.1",
     "typescript": "^4.3.5",
     "yargs": "^17.0.1"
   }
