@@ -2,7 +2,6 @@ import { use, expect } from "chai";
 import { solidity } from "ethereum-waffle";
 import { deployments, ethers } from "hardhat";
 import { Contract } from "ethers";
-import cloneArtifact from "../build/artifacts/contracts/Clone.sol/Clone.json";
 
 use(solidity);
 
@@ -51,7 +50,7 @@ describe("Factory", () => {
     });
   });
 
-  describe.only("#createInitializableClone", () => {
+  describe("#createInitializableClone", () => {
     let cloneInstance: Contract;
 
     beforeEach(async () => {
