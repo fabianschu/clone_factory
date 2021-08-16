@@ -8,23 +8,9 @@ const deployFunction: DeployFunction = async ({
   const { deploy } = deployments;
   const { f1 } = await getNamedAccounts();
 
-  const { address } = await deploy("TMain", {
-    contract: "Main",
-    from: f1,
-    args: [],
-    log: true,
-  });
-
   await deploy("Factory", {
     from: f1,
     args: [],
-    log: true,
-  });
-
-  await deploy("TClone", {
-    contract: "Clone",
-    from: f1,
-    args: [address],
     log: true,
   });
 };

@@ -65,6 +65,7 @@ export default {
   },
   namedAccounts: {
     f1: 0,
+    f2: 1,
   },
   mocha: {
     timeout: 2000000,

@@ -1,8 +1,9 @@
 pragma solidity 0.8.6;
 
-import "./Main.sol"; 
+import "./Main.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Clone {
+contract Clone is Ownable {
 
     Main public main;
     
