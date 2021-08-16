@@ -67,7 +67,7 @@ describe("Factory", () => {
       await cloneInstance.initialize();
     });
 
-    it("sets owner to be the factory", async () => {
+    it("sets owner to be EOA", async () => {
       const cloneOwner = await cloneInstance.owner();
 
       expect(cloneOwner).to.eq(f1.address);
