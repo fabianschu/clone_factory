@@ -14,7 +14,7 @@ export const setupTest = deployments.createFixture(
   }
 );
 
-describe.only("Factory", () => {
+describe("Factory", () => {
   let f1: any, f2: any;
   let factoryInstance: Contract;
 
@@ -48,7 +48,7 @@ describe.only("Factory", () => {
       cloneInstance = await ethers.getContractAt("Clone", cloneAddress);
     });
 
-    it("emits an event CloneCreated", async () => {
+    it.only("emits an event CloneCreated", async () => {
       await expect(await factoryInstance.createClone()).to.emit(
         factoryInstance,
         "CloneCreated"
