@@ -1,6 +1,6 @@
 import { use, expect } from "chai";
 import { solidity } from "ethereum-waffle";
-import { deployments, ethers } from "hardhat";
+import { artifacts, deployments, ethers } from "hardhat";
 import { Contract } from "ethers";
 
 use(solidity);
@@ -14,7 +14,7 @@ export const setupTest = deployments.createFixture(
   }
 );
 
-describe("Factory", () => {
+describe.only("Factory", () => {
   let f1: any, f2: any;
   let factoryInstance: Contract;
 
@@ -29,6 +29,17 @@ describe("Factory", () => {
       const createCloneTx = await factoryInstance.createClone();
       const receipt = await createCloneTx.wait();
       const eventSignature = "CloneCreated(address)";
+
+      // TMP
+      // const { abi } = await artifacts.readArtifact("Clone");
+      // const cloneInterface = new ethers.utils.Interface(abi);
+      // receipt.events.forEach((log: any) => {
+      //   console.log(cloneInterface.parseLog(log));
+      // });
+      // TMP
+
+      console.log(receipt.events);
+
       const cloneCreationEvent = receipt.events.find(
         (log: any) => log.eventSignature === eventSignature
       );
